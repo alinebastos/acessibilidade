@@ -29,7 +29,7 @@ Você pode ter vários `<fieldset>` no mesmo formulário, se necessário.
 
 Uma opção de design comum é usar apenas o `placeholder` do campo e sem `labels`, mas infelizmente o `placeholder` NÃO é visível para leitores de tela, portanto, isso é uma violação das WCAG.
 
-Portanto, para resolver esse problema, siga o uso básico de `labels`:
+Para resolver esse problema, siga o uso básico de `labels`:
 * Adicione o elemento `<label>` adequado;
 * Se, devido a opções de design, o site não puder ter `labels` visíveis, adicione-as usando uma classe que oculte a `label`visualmente;
 * Lembre-se de que o rótulo deve ter um atributo `for` vinculado ao `ID` de do atributo `input`.
