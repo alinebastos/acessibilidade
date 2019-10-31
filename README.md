@@ -23,7 +23,7 @@ Não use `<fieldset>` em torno de formulários que possuem apenas UM campo de en
 O `<fieldset>` deve ser usado apenas para agrupar vários campos com um objetivo comum, por exemplo, ao ter 3 elementos selecionados para definir uma data de nascimento, uma lista de botões de opção ou caixas de seleção com várias opções.
 Você pode ter vários `<fieldset>` no mesmo formulário, se necessário.
 
-#### 2. Use `labels` apropriadas. O texto do `placeholder` não as substitui.
+#### 2. Use `labels` apropriadas. O texto do `placeholder` não as substitui
 
 `labels` são elementos muito importantes para a acessibilidade, pois são a principal forma de o usuário com deficiência entender e poder usar os formulários.
 
@@ -33,3 +33,18 @@ Para resolver esse problema, siga o uso básico de `labels`:
 * Adicione o elemento `<label>` adequado;
 * Se, devido a opções de design, o site não puder ter `labels` visíveis, adicione-as usando uma classe que oculte a `label`visualmente;
 * Lembre-se de que o rótulo deve ter um atributo `for` vinculado ao `ID` de do atributo `input`.
+
+#### 3. Evite usar bibliotecas e plugins JS para ter elementos `<select>` customizados
+
+Algo que se tornou muito comum nos sites é usar algum plugin para substituir o elemento nativo `<select>` e simulá-lo usando `divs` ou `ul > li`.
+
+Infelizmente, independentemente do que essas páginas de plug-in digam, elas não estão em conformidade com os padrões de acessibilidade, porque mesmo que você possa usá-los com navegação no teclado, eles simulam e implementam esses recursos de maneira incorreta e não-nativa.
+
+Como resolver: A maneira mais simples e de longe a mais recomendada é abandonar completamente os plugins e apenas usar o
+elemento HTML nativo padrão `<select>`.
+
+É claro que os clientes/designers não vão gostar, porque existem algumas limitações no que pode ser estilizado por eles, mas se a acessibilidade for um requisito, então é a direção mais simples.
+
+Falando sobre as limitações dos elementos `<select>` nativos, você pode estilizar apenas a seleção em si, definindo o tamanho do texto, a borda, o preenchimento, etc.
+
+É possível trabalhar com estilos e padronizar o elemento *arrow* entre navegadores e dispositivos.
