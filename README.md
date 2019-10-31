@@ -48,3 +48,11 @@ elemento HTML nativo padrão `<select>`.
 Falando sobre as limitações dos elementos `<select>` nativos, você pode estilizar apenas a seleção em si, definindo o tamanho do texto, a borda, o preenchimento, etc.
 
 É possível trabalhar com estilos e padronizar o elemento *arrow* entre navegadores e dispositivos.
+
+Como sabemos, não há muita personalização para o elemento `option` quando expandido, pois eles são tratados como um elemento do sistema. Os únicos atributos que eles usarão do CSS são:
+
+* As propriedades da fonte como tamanho, família, peso e cor (altura da linha ou qualquer outra propriedade para adicionar espaço entre os itens não funcionarão. solução alternativa é ter opções vazias + desativadas + ocultas por ária entre elas);
+
+* Cor de fundo para toda a lista, com uma cor diferente para a selecionada, se desejado.
+
+Infelizmente, esse é o principal motivo pelo qual alguns designers/clientes exigem o uso de plug-ins, pois não gostam da aparência do elemento `option` padrão.
